@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Application de productivité | Home</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <header>
+
+        </header>
+        <main>
+           
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-1 col-md-4   col-12  shadow vh-100  ">
+                           <img class="logo" src="assets/images/logo.png" alt="">
+                           <div class="p-3">  
+                            <a href="" title="Aujourd'hui" class="btn btn-outline-primary w-100">                            
+                                <i class="bi bi-hourglass-split"></i>
+                            </a>    
+                           </div>
+                           <!-- <div class="p-3">
+                            <a href="" title="Demain" class="btn btn-outline-primary w-100">                            
+
+                            <i class="bi bi-calendar-date"></i>
+                            </a>
+                           </div>
+                           <div class="p-3">
+                            <a href="" title="Semain" class="btn btn-outline-primary w-100">                            
+
+                            <i class="bi bi-stopwatch"></i>
+                            </a>
+                           </div> -->
+                    </div>
+                    <div class="col-lg-11 col-md-8 col-12 " id="dart">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-12 col-md-12 col-12 pt-4">
+                                </div>
+                                <div class="col-lg-12 col-md-12 col-12 pt-5">
+                                    <div class="container">
+                                        <div class="row" id="row">
+                                   <div class="col-lg-12 bg-primary1 shadow rounded ">
+                                    <div class="container">
+                                        <!-- <div class="row">
+                                        <div class="col-lg-3 text-white">
+                                            <h2>0mn</h2>
+                                            <p>Heures prévue</p>
+
+                                        </div>
+                                        <div class="col-lg-3 text-white">
+                                            <h2>0</h2>
+                                            <p>Tâches à accomplir</p>
+                                        </div>
+                                        <div class="col-lg-3 text-white">
+                                            <h2>0mn</h2>
+                                            <p>Heures prévue</p>
+                                        </div>
+                                        <div class="col-lg-3 text-white">
+
+                                            <h2>0mn</h2>
+                                            <p>Temps passé</p>
+                                        </div>
+
+                                    </div> -->
+                                    </div>
+                                   </div>
+                                  
+                                </div>
+                            </div>
+                                </div>
+                                <div class="col-lg-12 col-md-12 col-12 pt-5">
+                                    <div class="container">
+                                        <div class="row" id="row">
+                                   <div class="col-lg-12 bg-primary1 shadow rounded ">
+                                    <form action="#" onsubmit="return validateOnBlur()" id="formsubmit">
+                                    <div class="container">
+                                        <div class="row">
+                                        <div class="col-lg-5 text-white p-3">
+                                           <input type="text" id="titre" class="form-control" onblur="validateOnBlur()" placeholder="Titre..." >
+                                           <p id="errorElementTitre"></p>
+
+                                        </div>
+                                        <div class="col-lg-6 text-white p-3">
+                                            <select class="form-select" id="priorite"  aria-label="Default select example">
+                                                <option onblur="validateOnBlur()" value="basse">basse</option>
+                                                <option onblur="validateOnBlur()"  value="moyenne">moyenne</option>
+                                                <option onblur="validateOnBlur()"  value="haute">haute</option>
+                                              </select>
+                                              <p id="errorElementPriorite"></p>
+                                          
+                                        </div>
+                                        <div class="col-lg-1 text-white p-3 ">
+                                          <button type="submit" onclick="ajouter()" class=" btn btn-outline-light  h3">  <i class="bi bi-plus-lg"></i></button>
+                                        </div>
+                                        <div class="col-lg-5 text-white p-3 ">
+  <textarea class="form-control" id="exampleFormControlTextarea1" id="description" placeholder="Description..." rows="3"></textarea>
+                                          </div>
+                                          <div class="col-lg-6 text-white p-3">
+                                            <select class="form-select" id="pauses" aria-label="Default select example">
+                                                <option   value="courtes ">courtes </option>
+                                                <option   value="longues ">longues </option>
+                                              </select>
+                                              <p id="errorElementpauses"></p>
+                                          
+                                        </div>
+                              
+
+                                    </div>
+                                </form>
+                                    </div>
+                                   </div>
+                                  
+                                </div>
+                            </div>
+                                </div>
+                                <div class="col-lg-12 col-md-12 col-12 pt-5 pb-3 ">
+                                    <div class="container">
+                                        <div class="row" id="row">
+                                   <div class="col-lg-12 bg-primary1 shadow rounded pb-3 vh-auto ">
+                                    <u class="text-white h3">liste : </u>
+
+                                    <div class="container">
+                                        <div class="row" id="taches">                       
+
+                                    </div>
+                                    </div>
+                                   </div>
+                                  
+                                </div>
+                            </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="exampleModalLabel">modifier tcahe</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <form>
+                        <div class="mb-3">
+                          <label for="modalTitreInput" class="col-form-label">Titer:</label>
+                          <input type="text" class="form-control" id="modalTitreInput">
+                        </div>
+                        <div class="mb-3">
+                            <select class="form-select"  id="modalPrioriteInput" aria-label="Default select example">
+                                <option  value="basse">basse</option>
+                                <option   value="moyenne">moyenne</option>
+                                <option   value="haute">haute</option>
+                              </select>
+                          </div>
+                          <div class="mb-3">
+                            <select class="form-select" id="pausesmodel" aria-label="Default select example">
+                                <option   value="courtes ">courtes </option>
+                                <option   value="longues ">longues </option>
+                              </select>
+                          </div>
+                        <div class="mb-3">
+                          <label for="modalDescriptionInput" class="col-form-label">Description:</label>
+                          <textarea class="form-control" id="modalDescriptionInput"></textarea>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="submit" onclick="enregister()" class="btn btn-primary">Modifier</button>
+                          </div>
+                      </form>
+                    </div>
+                    
+                  </div>
+                </div>
+                
+              </div>
+              <div class="offcanvas offcanvas-top vh-100" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasTopLabel">Pomodoro</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body vh-100">
+                    <div class="container py-4">
+                        <div class="row">
+                            <div class="col-lg-8 mx-auto">
+                                <p id="test"></p>
+                                <div class="card shadow">
+                                    <div class="card-header bg-light ">
+                                       <i class="bi bi-clock"></i> <h1 id="title1"></h1>
+                                    </div>
+                                    <div class="card-body">
+                                        <!-- Timer Display and Controls -->
+                                        <div class="text-center mb-4">
+                                            <h1 class="display-1 fw-bold" id="timer">25:00</h1>
+                                            <!-- Timer Duration Selection -->
+                                          
+                                            <div class="d-block">
+                                                <div class="btn-group">
+                                                    <button class="btn btn-primary" id="startTimer">
+                                                        <i class="bi bi-play-fill"></i> Start
+                                                    </button>
+                                                    <button class="btn btn-secondary" id="resetTimer">
+                                                        <i class="bi bi-arrow-counterclockwise"></i> Reset
+                                                    </button>
+                                                </div>
+                                                <audio id="pomodoroEndAudio" src="./assets/media/kitchen-timer-87485.mp3" preload="auto"></audio>
+<audio id="breakStartAudio" src="./assets/media/window-breaking-105533.mp3" preload="auto"></audio>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              </div>
+        </main>
+        <footer>
+        </footer>
+        <script src="./js/app.js"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+            crossorigin="anonymous"
+        ></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+            integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+            crossorigin="anonymous"
+        ></script>
+    </body>
+</html>
